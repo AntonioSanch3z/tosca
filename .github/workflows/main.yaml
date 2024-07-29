@@ -76,3 +76,8 @@ jobs:
             echo $ARTIFACT
             ansible-playbook --syntax-check $ARTIFACT
           done
+
+       - name: Run Ansible playbook to test custom module
+        run: |
+          ansible-playbook -i localhost, -c local artifacts/download_dataset.yaml 
+          # -e "dataset_url=https://example.com/dataset output_dir=/tmp/datasets"
