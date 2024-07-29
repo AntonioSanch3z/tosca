@@ -139,7 +139,7 @@ topology_template:
       interfaces:
         Standard:
           create:
-            implementation: /usr/local/lib/python3.10/dist-packages/IM/tosca/tosca-types/artifacts/download_dataset.yaml
+            implementation: https://raw.githubusercontent.com/AntonioSanch3z/tosca/asanchez-dev/artifacts/download_dataset.yaml
             inputs:
               dataset_url: { get_input: dataset_url }
               output_dir: { get_input: output_dir }
